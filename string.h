@@ -2,11 +2,10 @@
 typedef struct stringType *string;
 
 struct stringType {
-// your definitions go here (you will only need 2 fields - one
-// to keep track of the length, the other a char array of
-// MAX_STRING_SIZE length. To make things easier just define your
-// data field as a char array in your structure - you will not
-// need to malloc it in screate at runtime!)
+
+ int length;
+ char data[MAX_STRING_SIZE];
+ 
 };
 
 string screate(); // returns a newly created string

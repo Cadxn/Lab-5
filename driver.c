@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "string.h"
+#include "string.c"
 
 int main(void){
 string s1 = screate();
