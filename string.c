@@ -28,12 +28,34 @@ int slen(string s){
     return s->length;
 }
 int scmp(string s1, string s2){
+    int length = 0;
+    if(s1->length > s2->length){
+        length = s1->length;
+    } else {
+        length = s2->length;
+    }
+    for(int i = 0; i < length; i++){
+        if(s1->data[i] == s2->data[i]){
 
+        } else if (s1->data[i] > s2->data[i]){
+            return 1;
+        }
+        else if (s1->data[i] < s2->data[i]){
+            return -1;
+        }
+    }
+    return 0;
 }
 string scat(string dest, string src){
+    string temp_string = dest;
 
+    for(int i = 0; i < src->length; i++){
+        temp_string->data[dest->length + i] = src->data[i];
+    }
 
-    return dest;
+    temp_string->length += src->length;
+
+    return temp_string;
 }
 
 string sToUpper(string s){
